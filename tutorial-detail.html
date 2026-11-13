@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Tutorial - SMK Nurul Islam Cianjur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/artikel.css" />
+    <link rel="stylesheet" href="includes/menu.css" />
+    <link rel="stylesheet" href="includes/sidebar.css" />
+    <link rel="stylesheet" href="includes/footer.css" />
+    <link rel="stylesheet" href="includes/scroll-effects.css" />
+  </head>
+  <body>
+    <nav class="site-navigation" aria-label="Menu utama">
+      <div class="site-nav-container">
+        <a href="index.html" class="site-brand">
+          <img src="assets/images/logo_nuris.jpg" alt="Logo SMK Nurul Islam" />
+          <span class="site-brand-copy"><strong>SMK NURUL ISLAM CIANJUR</strong><span>Sekolah Modern Berbasis Religi</span></span>
+        </a>
+        <ul class="site-nav-menu" id="siteNavMenu">
+          <li><a href="index.html" class="site-nav-link">Home</a></li>
+          <li><a href="profil.html" class="site-nav-link">Profil</a></li>
+          <li><a href="artikel.html" class="site-nav-link">Artikel</a></li>
+          <li><a href="tutorial.html" class="site-nav-link">Tutorial</a></li>
+          <li><a href="galeri.html" class="site-nav-link">Galeri</a></li>
+          <li><a href="kontak.html" class="site-nav-link">Kontak</a></li>
+        </ul>
+        <button class="site-menu-toggle" type="button" aria-label="Buka navigasi" aria-controls="siteNavMenu" aria-expanded="false">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+
+    <main class="main-wrapper">
+      <div class="article-detail-layout">
+        <article class="article-detail">
+          <span id="tutorialDetailCategory" class="category-label">Kategori</span>
+          <h1 id="tutorialDetailTitle">Memuat tutorial...</h1>
+          <div class="article-detail-date">
+            <i class="fa-regular fa-clock" aria-hidden="true"></i>
+            <span id="tutorialDetailReadTime"></span>
+          </div>
+          <img id="tutorialDetailImage" src="assets/images/desain_grafis.jpg" alt="" />
+          <div class="article-detail-body">
+            <p id="tutorialDetailIntro"></p>
+            <h2>Langkah-langkah</h2>
+            <ol id="tutorialDetailSteps"></ol>
+          </div>
+          <a href="tutorial.html" class="btn-read-more">← Kembali ke semua tutorial</a>
+        </article>
+
+        <aside class="sidebar sidebar-area" aria-label="Informasi sekolah">
+          <section class="sidebar-card">
+            <h2 class="sidebar-header">Kategori Tutorial</h2>
+            <ul class="sidebar-list">
+              <li><a href="tutorial.html#pplg"><span>PPLG / Pemrograman</span></a></li>
+              <li><a href="tutorial.html#tjkt"><span>TJKT / Jaringan</span></a></li>
+              <li><a href="tutorial.html#dkv"><span>DKV / Desain</span></a></li>
+              <li><a href="tutorial.html#akademik"><span>Panduan Sekolah</span></a></li>
+            </ul>
+          </section>
+          <section class="sidebar-card">
+            <h2 class="sidebar-header">Panduan Belajar</h2>
+            <ul class="sidebar-list">
+              <li><a href="tutorial.html"><span>Lihat semua tutorial</span></a></li>
+              <li><a href="profil.html#program-keahlian"><span>Pilih program keahlian</span></a></li>
+              <li><a href="kontak.html#formKontak"><span>Tanyakan informasi</span></a></li>
+            </ul>
+          </section>
+          <section class="sidebar-card">
+            <h2 class="sidebar-header">Program Keahlian</h2>
+            <ul class="sidebar-list">
+              <li><a href="profil.html#program-pplg"><span>PPLG</span></a></li>
+              <li><a href="profil.html#program-tjkt"><span>TJKT</span></a></li>
+              <li><a href="profil.html#program-to"><span>Teknik Otomotif</span></a></li>
+              <li><a href="profil.html#program-akl"><span>Akuntansi dan Keuangan</span></a></li>
+              <li><a href="profil.html#program-mplb"><span>Manajemen Perkantoran</span></a></li>
+              <li><a href="profil.html#program-dkv"><span>Desain Komunikasi Visual</span></a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/shared-layout.js"></script>
+  </body>
+</html>

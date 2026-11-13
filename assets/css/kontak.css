@@ -1,0 +1,331 @@
+/* ==========================================================
+   CSS KHUSUS HALAMAN KONTAK - SMK NURUL ISLAM CIANJUR
+   ========================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  background-color: #f8fafc;
+  color: #26374b;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* MAIN LAYOUT */
+.main-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px 1.5rem 45px;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 2.2fr 1fr;
+  }
+}
+
+/* PAGE HEADING */
+.article-page-heading {
+  margin-bottom: 20px;
+  padding: 26px 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #fff, #f8fafc);
+  box-shadow: 0 5px 18px rgba(20,43,70,.05);
+}
+
+.article-page-heading > div:first-child > span {
+  color: #b77900;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.article-page-heading h1 {
+  margin-top: 7px;
+  color: #0b2545;
+  font-size: clamp(24px, 3vw, 32px);
+}
+
+.article-page-heading p {
+  max-width: 680px;
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* KARTU KONTAK CEPAT */
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: 0 5px 16px rgba(11, 37, 69, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(11,30,54,0.06);
+}
+
+.info-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background-color: #eff6ff;
+  color: #17477b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.info-text h3 {
+  font-size: 0.95rem;
+  color: #0b2545;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.info-text p {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+.info-text a:hover {
+  color: #17477b;
+  text-decoration: underline;
+}
+
+/* SEKSI FORMULIR & MAPS */
+.contact-form-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.form-container, .map-container {
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 5px 16px rgba(11, 37, 69, 0.04);
+}
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-title h2, .map-header h3 {
+  font-size: 1.25rem;
+  color: #0b2545;
+  font-weight: 700;
+}
+
+.form-title p {
+  font-size: 0.825rem;
+  color: #64748b;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #26374b;
+}
+
+.required {
+  color: #c2410c;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: #26374b;
+  background-color: #f8fafc;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+  border-color: #17477b;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(23,71,123,0.12);
+}
+
+.btn-send-message {
+  align-self: flex-start;
+  background-color: #0b2545;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-send-message:hover {
+  background-color: #17477b;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* WIDGET GOOGLE MAPS */
+.map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.map-eyebrow {
+  display: block;
+  margin-bottom: 4px;
+  color: #b77900;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.map-header h3 {
+  font-size: 1rem;
+}
+
+.map-directions {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 11px;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #17477b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.map-directions:hover {
+  background: #dbeafe;
+}
+
+.map-wrapper {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  min-height: 360px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.map-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-info-grid, .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-section {
+    grid-template-columns: 1fr;
+  }
+
+  .map-wrapper {
+    min-height: 300px;
+  }
+
+  .form-container, .map-container {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+}

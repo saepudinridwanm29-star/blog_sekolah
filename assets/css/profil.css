@@ -1,0 +1,563 @@
+:root {
+  --navy: #0b2545;
+  --gold: #fbbf24;
+  --text: #26374b;
+  --muted: #667085;
+  --border: #e5eaf0;
+  --background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.profile-page {
+  background: #fff;
+}
+
+.profile-page > .content-layout {
+  width: calc(100% - 48px);
+  max-width: 1320px;
+  margin: auto;
+  padding: 24px 0 35px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 32px;
+  align-items: start;
+}
+
+.profile-about,
+.profile-vision,
+.profile-teachers,
+.profile-programs,
+.profile-program-card {
+  scroll-margin-top: 92px;
+}
+
+.profile-main-content {
+  min-width: 0;
+}
+
+.profile-main-content .profile-container {
+  width: 100%;
+}
+
+.profile-container {
+  width: 100%;
+  margin: auto;
+}
+
+.profile-page > .profile-vision .profile-container,
+.profile-page > .profile-teachers .profile-container,
+.profile-page > .profile-programs .profile-container {
+  width: calc(100% - 48px);
+  max-width: 1180px;
+}
+
+.profile-about {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(145deg, #fff 65%, #f7f9fc 100%);
+  box-shadow: 0 16px 38px rgba(20,43,70,.07);
+}
+
+.profile-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.profile-about-image {
+  min-height: 390px;
+  position: relative;
+}
+
+.profile-about-image > img {
+  width: 100%;
+  height: 390px;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(20,43,70,.12);
+  object-fit: cover;
+}
+
+.profile-section-label,
+.profile-principal-content > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #5d7189;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.profile-about-content h2,
+.profile-section-heading h2,
+.profile-teacher-heading h2 {
+  color: #111827;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.profile-about-content h2 {
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.profile-about-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 52px;
+  height: 3px;
+  border-radius: 99px;
+  background: var(--gold);
+}
+
+.profile-about-content h2 span,
+.profile-section-heading h2 span,
+.profile-teacher-heading h2 span {
+  color: inherit;
+}
+
+.profile-about-content > p,
+.profile-section-heading > p,
+.profile-teacher-heading p {
+  margin-top: 17px;
+  color: #111827;
+  font-size: 12px;
+  line-height: 1.95;
+}
+
+.profile-school-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 19px 15px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+
+.profile-info-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.profile-info-item > i {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--background);
+  color: var(--navy);
+}
+
+.profile-info-item small {
+  color: #667085;
+  font-size: 9px;
+}
+
+.profile-info-item strong {
+  display: block;
+  margin-top: 4px;
+  color: #111827;
+  font-size: 10px;
+}
+
+.profile-vision {
+  padding: 80px 0 90px;
+  background: #fff;
+}
+
+.profile-section-heading {
+  max-width: 600px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.profile-section-heading h2::after,
+.profile-teacher-heading h2::after {
+  content: "";
+  width: 48px;
+  height: 3px;
+  display: block;
+  margin: 14px auto 0;
+  border-radius: 99px;
+  background: var(--gold);
+}
+
+.profile-teacher-heading h2::after {
+  margin-left: 0;
+}
+
+.profile-vision-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.profile-vision-box,
+.profile-mission {
+  height: 100%;
+  padding: 32px;
+  border: 1px solid #d8dee6;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(20,43,70,.06);
+}
+
+.profile-vision-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.profile-vision-heading small {
+  color: #667085;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.profile-vision-heading h3,
+.profile-mission-heading h3 {
+  margin-top: 4px;
+  color: #111827;
+  font-size: 20px;
+}
+
+.profile-vision-box > p,
+.profile-mission-text {
+  margin-top: 20px;
+  color: #111827;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.profile-mission-heading {
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.profile-vision-heading {
+  align-items: flex-end;
+}
+
+.profile-mission-heading .profile-section-label {
+  margin-bottom: 5px;
+}
+
+.profile-mission-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.profile-mission-list li {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #e8edf2;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.profile-mission-list li > span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.profile-mission-list p {
+  color: #344256;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.profile-teachers {
+  padding: 85px 0;
+  background: #fff;
+}
+
+.profile-teacher-heading {
+  margin-bottom: 36px;
+}
+
+.profile-principal {
+  max-width: 850px;
+  min-height: 225px;
+  margin: 0 auto 55px;
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.profile-principal-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #f1f5f9;
+}
+
+.profile-principal-content {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-principal-content h3 {
+  color: #111827;
+  font-size: 20px;
+}
+
+.profile-principal-content p,
+.profile-principal-content small {
+  color: #111827;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.profile-teacher-list-heading {
+  margin-bottom: 18px;
+}
+
+.profile-teacher-list-heading h3 {
+  color: #111827;
+}
+
+.profile-teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.profile-teacher-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(20,43,70,.06);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.profile-teacher-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(20,43,70,.12);
+}
+
+.profile-teacher-photo {
+  aspect-ratio: 1.28;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.profile-teacher-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.profile-teacher-info {
+  padding: 15px;
+}
+
+.profile-teacher-info h4,
+.profile-teacher-info span {
+  color: #111827;
+}
+
+.profile-teacher-info span {
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+}
+
+.profile-programs {
+  padding: 80px 0 90px;
+  background: #fff;
+}
+
+.profile-program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.profile-program-card {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(20,43,70,.12);
+  scroll-margin-top: 24px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.profile-program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 34px rgba(20,43,70,.18);
+}
+
+.profile-program-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.profile-program-card#program-akl img {
+  object-fit: contain;
+  background: #f1f5f9;
+}
+
+.profile-program-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8,28,53,.72);
+}
+
+.profile-program-card div {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  bottom: 18px;
+  left: 20px;
+}
+
+.profile-program-card span,
+.profile-program-card p {
+  font-size: 9px;
+}
+
+.profile-program-card h3 {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.profile-program-card .profile-program-description {
+  display: block;
+  max-width: 290px;
+  margin-top: 8px;
+  color: rgba(255,255,255,.88);
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1000px) {
+  .profile-page > .content-layout {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 16px;
+  }
+
+  .profile-vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-about-grid {
+    gap: 35px;
+  }
+
+  .profile-teacher-grid,
+  .profile-program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 700px) {
+  .profile-page > .profile-vision .profile-container,
+  .profile-page > .profile-teachers .profile-container,
+  .profile-page > .profile-programs .profile-container {
+    width: calc(100% - 30px);
+  }
+
+  .profile-page > .content-layout {
+    width: calc(100% - 30px);
+    grid-template-columns: 1fr;
+  }
+
+  .profile-about {
+    padding: 20px;
+  }
+
+  .profile-about-grid,
+  .profile-principal {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-about-image > img {
+    height: 320px;
+    min-height: 320px;
+  }
+
+  .profile-teacher-grid,
+  .profile-program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 430px) {
+  .profile-school-info,
+  .profile-teacher-grid,
+  .profile-program-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-about-image > img {
+    height: 250px;
+    min-height: 250px;
+  }
+
+  .profile-vision-box,
+  .profile-mission {
+    padding: 22px;
+  }
+}

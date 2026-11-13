@@ -1,0 +1,164 @@
+:root {
+    --navy: #0b2545;
+    --text: white;
+    --hover: #3566a7;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 32px;
+  background: var(--navy);
+  color: var(--text);
+  border-top: 1px solid #e5eaf0;
+}
+
+.footer-container {
+  width: calc(100% - 48px);
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 0 28px;
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1.5fr 1.3fr;
+  gap: 24px;
+}
+
+.footer-column {
+  min-width: 0;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-brand h3 {
+  margin: 0;
+  font-size: 11px;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-image: url("../assets/images/logo_nuris.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.footer-column > p,
+.footer-detail,
+.footer-links a {
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+}
+
+.footer-links a:hover {
+  color: var(--hover);
+}
+
+.footer-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 0 7px;
+}
+
+.footer-detail i {
+  width: 15px;
+  margin-top: 4px;
+  color: var(--text);
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.social-links a {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: #f1f5f9;
+  color: #000000;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-2px);
+  background: #e2e8f0;
+}
+
+.social-links .fa-youtube:hover{
+  color: #ff0000;
+  background-color: #ffffff;
+}
+
+.social-links .fa-instagram:hover{
+  color: #f33232;
+  background-color: #ffffff;
+}
+
+.social-links .fa-facebook-f:hover{
+  color: #0b64d8;
+  background-color: #ffffff;
+}
+
+.social-links .fa-tiktok:hover{
+  color: black;
+  background-color: #ffffff;
+}
+
+.social-links i {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: transparent;
+  color: rgb(63, 59, 59);
+}
+
+.copyright {
+  padding: 12px 15px;
+  border-top: 1px solid #e2e8f0;
+  background: #f1f5f9;
+  color: #000000;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    width: calc(100% - 30px);
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

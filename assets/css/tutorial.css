@@ -1,0 +1,225 @@
+/* ==========================================================
+   CSS KHUSUS HALAMAN TUTORIAL - SMK NURUL ISLAM CIANJUR
+   ========================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* MAIN LAYOUT */
+.main-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px 1.5rem 45px;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 2.2fr 1fr;
+  }
+}
+
+/* PAGE HEADING */
+.article-page-heading {
+  margin-bottom: 20px;
+  padding: 26px 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #fff, #f8fafc);
+  box-shadow: 0 5px 18px rgba(20,43,70,.05);
+}
+
+.article-page-heading > div:first-child > span {
+  color: #d99b00;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.article-page-heading h1 {
+  margin-top: 7px;
+  color: #0b1e36;
+  font-size: 26px;
+}
+
+.article-page-heading p {
+  max-width: 680px;
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+/* FILTER PILLS */
+.article-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.article-filter a {
+  padding: 7px 14px;
+  border: 1px solid #dce3eb;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #475569;
+  transition: all 0.2s ease;
+}
+
+.article-filter a.active,
+.article-filter a:hover {
+  border-color: #0b1e36;
+  background: #0b1e36;
+  color: #fff;
+}
+
+/* TUTORIAL GRID & CARDS */
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.article-card {
+  background-color: #ffffff;
+  border-radius: 0.85rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card[hidden] {
+  display: none;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+.article-image-box {
+  position: relative;
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e2e8f0;
+}
+
+.article-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.article-card:hover .article-image-box img {
+  transform: scale(1.05);
+}
+
+.article-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-bottom: 0.6rem;
+}
+
+.article-meta i {
+  color: #eab308;
+  margin-right: 0.25rem;
+}
+
+.category-label {
+  background-color: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 10px;
+  color: #1e3a8a;
+}
+
+.article-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0b1e36;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.article-card:hover .article-title {
+  color: #1e3a8a;
+}
+
+.article-excerpt {
+  font-size: 0.825rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.btn-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  transition: gap 0.2s ease, color 0.2s;
+  margin-top: auto;
+}
+
+.btn-read-more:hover {
+  color: #eab308;
+  gap: 0.75rem;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 700px) {
+  .article-list {
+    grid-template-columns: 1fr;
+  }
+}

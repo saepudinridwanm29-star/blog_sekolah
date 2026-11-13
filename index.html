@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMK Nurul Islam Cianjur - Blog Sekolah</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="includes/menu.css" />
+    <link rel="stylesheet" href="includes/sidebar.css" />
+    <link rel="stylesheet" href="includes/footer.css" />
+    <link rel="stylesheet" href="includes/scroll-effects.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="brand">
+          <div class="brand-logo">
+            <img src="assets/images/logo_nuris.jpg" alt="Logo Sekolah" />
+          </div>
+
+          <div class="brand-text">
+            <h1>SMK NURUL ISLAM CIANJUR</h1>
+            <p>"Sekolah Modern Berbasis Religi"</p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <form class="header-search" id="headerSearch">
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Cari berita..."
+              autocomplete="off"
+              aria-label="Cari berita"
+            />
+
+            <button type="submit" aria-label="Cari">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- hero banner -->
+    <section class="hero">
+      <div class="hero-background" id="heroBackground"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-container">
+        <div class="hero-content">
+          <h2>
+            Selamat Datang di<br />
+            <span>Blog SMK Nurul Islam Cianjur</span>
+          </h2>
+
+          <p>
+            Media informasi, berita, dan dokumentasi kegiatan sekolah untuk kita
+            semua.
+          </p>
+
+          <a href="profil.html" class="hero-button">
+            Kenali Sekolah Kami
+            <i class="fa-solid fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-indicators">
+        <button
+          class="indicator active"
+          data-slide="0"
+          aria-label="Slide 1"
+        ></button>
+        <button class="indicator" data-slide="1" aria-label="Slide 2"></button>
+        <button class="indicator" data-slide="2" aria-label="Slide 3"></button>
+      </div>
+    </section>
+
+    <!-- navigation -->
+    <nav class="navigation" aria-label="Menu utama">
+      <div class="navigation-container">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="profil.html" class="nav-link">Profil</a>
+        <a href="artikel.html" class="nav-link">Artikel</a>
+        <a href="tutorial.html" class="nav-link">Tutorial</a>
+        <a href="galeri.html" class="nav-link">Galeri</a>
+        <a href="kontak.html" class="nav-link">Kontak</a>
+      </div>
+    </nav>
+
+    <!-- main content -->
+    <main class="main-container" id="berita">
+      <div class="content-layout">
+        <!-- left content -->
+        <section class="news-section">
+          <div class="section-header">
+            <div class="section-title">
+              <span class="title-line"></span>
+              <div>
+                <small>INFORMASI TERKINI</small>
+                <h2>Berita Terbaru</h2>
+              </div>
+            </div>
+
+            <a href="artikel.html" class="see-all">
+              Lihat Semua
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- card baru -->
+          <div class="news-grid">
+            <!-- berita 1 -->
+            <article class="news-card" data-news-card>
+              <div class="news-image">
+                <img
+                  src="assets/images/upacara_nuris.jpg"
+                  alt="Upacara Hari Sumpah Pemuda"
+                  loading="lazy"
+                />
+                <span class="category"> Kegiatan Sekolah </span>
+              </div>
+
+              <div class="news-content">
+                <h3>
+                  <a href="artikel-detail.html?id=sumpah-pemuda">
+                    Upacara Hari Sumpah Pemuda Berlangsung Khidmat
+                  </a>
+                </h3>
+
+                <div class="news-date">
+                  <i class="fa-regular fa-calendar-days"></i>
+                  28 Oktober 2026
+                </div>
+
+                <p>
+                  SMK Nurul Islam Cianjur menggelar upacara peringatan Hari
+                  Sumpah Pemuda dengan penuh semangat dan disiplin tinggi.
+                </p>
+
+                <a href="artikel-detail.html?id=sumpah-pemuda" class="read-more">
+                  Baca Selengkapnya
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- berita 2 -->
+            <article class="news-card" id="prestasi" data-news-card>
+              <div class="news-image">
+                <img
+                  src="assets/images/prestasi/juara_puisi.jpg"
+                  alt="Dokumentasi apresiasi siswa bersama guru"
+                  loading="lazy"
+                />
+                <span class="category"> Prestasi </span>
+              </div>
+
+              <div class="news-content">
+                <h3>
+                  <a href="artikel-detail.html?id=juara-puisi">
+                    Siswa SMK Nurul Islam Raih Juara 1 Lomba Menulis Puisi
+                  </a>
+                </h3>
+
+                <div class="news-date">
+                  <i class="fa-regular fa-calendar-days"></i>
+                  25 September 2026
+                </div>
+
+                <p>
+                  Salah satu siswa kami berhasil meraih juara 1 dalam lomba
+                  menulis puisi tingkat kabupaten dengan karya inovatif dan
+                  kreatif.
+                </p>
+
+                <a href="artikel-detail.html?id=juara-puisi" class="read-more">
+                  Baca Selengkapnya
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- berita 3 -->
+            <article class="news-card" id="galeri" data-news-card>
+              <div class="news-image">
+                <img
+                  src="perkemahan.jpg"
+                  alt="Kegiatan ekstrakurikuler pramuka"
+                  loading="lazy"
+                />
+                <span class="category"> Ekstrakurikuler </span>
+              </div>
+
+              <div class="news-content">
+                <h3>
+                  <a href="artikel-detail.html?id=pramuka"> Ekstrakurikuler Pramuka Gelar Perkemahan </a>
+                </h3>
+
+                <div class="news-date">
+                  <i class="fa-regular fa-calendar-days"></i>
+                  12 Oktober 2026
+                </div>
+
+                <p>
+                  Kegiatan Perkemahan Sabtu-Minggu menjadi ajang mempererat
+                  kebersamaan dan kemandirian seluruh anggota pramuka.
+                </p>
+
+                <a href="artikel-detail.html?id=pramuka" class="read-more">
+                  Baca Selengkapnya
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Pesan hasil pencarian -->
+            <div class="search-empty" id="searchEmpty" hidden>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <h3>Berita tidak ditemukan</h3>
+              <p>Coba gunakan kata kunci pencarian lainnya.</p>
+            </div>
+          </div>
+
+          <!-- informasi sekolah -->
+          <div class="school-info" id="profil">
+            <div class="info-content">
+              <h3>Informasi Sekolah</h3>
+              <p>
+                SMK Nurul Islam Cianjur terus berkomitmen mencetak generasi
+                unggul, berakhlak mulia, dan siap menghadapi dunia kerja.
+              </p>
+            </div>
+
+            <a href="profil.html" class="info-button">
+              Tentang Kami
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </section>
+
+        <aside class="sidebar sidebar-area" aria-label="Informasi sekolah">
+          <section class="sidebar-card">
+            <h2 class="sidebar-header">Program Keahlian</h2>
+            <ul class="sidebar-list">
+              <li><a href="profil.html#program-pplg"><span><strong>PPLG</strong>Pengembangan Perangkat Lunak dan Gim</span></a></li>
+              <li><a href="profil.html#program-tjkt"><span><strong>TJKT</strong>Teknik Jaringan Komputer dan Telekomunikasi</span></a></li>
+              <li><a href="profil.html#program-to"><span><strong>TO</strong>Teknik Otomotif</span></a></li>
+              <li><a href="profil.html#program-akl"><span><strong>AKL</strong>Akuntansi dan Keuangan Lembaga</span></a></li>
+              <li><a href="profil.html#program-mplb"><span><strong>MPLB</strong>Manajemen Perkantoran dan Layanan Bisnis</span></a></li>
+              <li><a href="profil.html#program-dkv"><span><strong>DKV</strong>Desain Komunikasi Visual</span></a></li>
+            </ul>
+          </section>
+          <section class="sidebar-card">
+            <h2 class="sidebar-header">Kontak Sekolah</h2>
+            <div class="sidebar-contact">
+              <p><i class="fa-solid fa-school" aria-hidden="true"></i><span>Jl. Raya Cianjur - Bandung KM. 09, Desa Selajambe, Kec. Sukaluyu, Cianjur</span></p>
+              <p><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+62263325749">(0263) 325749</a></p>
+              <p><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:smknurulislamcianjur@gmail.com">smknurulislamcianjur@gmail.com</a></p>
+            </div>
+          </section>
+          <section class="sidebar-card">
+            <h2 class="sidebar-header">Jelajahi Sekolah</h2>
+            <ul class="sidebar-list">
+              <li><a href="profil.html"><span>Profil dan visi misi</span></a></li>
+              <li><a href="artikel.html"><span>Berita dan informasi</span></a></li>
+              <li><a href="tutorial.html"><span>Panduan belajar</span></a></li>
+              <li><a href="galeri.html"><span>Foto kegiatan sekolah</span></a></li>
+              <li><a href="kontak.html"><span>Lokasi dan kontak</span></a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <section class="home-programs" aria-labelledby="homeProgramsTitle">
+      <div class="home-programs-container">
+        <div class="home-programs-heading">
+          <span>MASA DEPAN DIMULAI DI SINI</span>
+          <h2 id="homeProgramsTitle">Pilih Program Keahlianmu</h2>
+          <p>Kenali bidang belajar dan kompetensi yang dapat dikembangkan di SMK Nurul Islam Cianjur.</p>
+        </div>
+        <div class="home-programs-grid">
+          <a class="home-program-card" href="profil.html#program-pplg">
+            <img src="assets/images/jurusan/pplg.jpg" alt="Peserta didik program PPLG" loading="lazy" />
+            <span>PPLG</span>
+            <h3>Pengembangan Perangkat Lunak dan Gim</h3>
+          </a>
+          <a class="home-program-card" href="profil.html#program-tjkt">
+            <img src="assets/images/jurusan/tjkt.jpg" alt="Peserta didik program TJKT" loading="lazy" />
+            <span>TJKT</span>
+            <h3>Teknik Jaringan Komputer dan Telekomunikasi</h3>
+          </a>
+          <a class="home-program-card" href="profil.html#program-to">
+            <img src="assets/images/jurusan/to.jpg" alt="Peserta didik program Teknik Otomotif" loading="lazy" />
+            <span>TO</span>
+            <h3>Teknik Otomotif</h3>
+          </a>
+          <a class="home-program-card" href="profil.html#program-akl">
+            <img src="assets/images/produktif/produktif_akl.jpg" alt="Guru produktif program AKL" loading="lazy" />
+            <span>AKL</span>
+            <h3>Akuntansi dan Keuangan Lembaga</h3>
+          </a>
+          <a class="home-program-card" href="profil.html#program-mplb">
+            <img src="assets/images/jurusan/mplb.jpg" alt="Peserta didik program MPLB" loading="lazy" />
+            <span>MPLB</span>
+            <h3>Manajemen Perkantoran dan Layanan Bisnis</h3>
+          </a>
+          <a class="home-program-card" href="profil.html#program-dkv">
+            <img src="assets/images/jurusan/dkv.jpg" alt="Peserta didik program DKV" loading="lazy" />
+            <span>DKV</span>
+            <h3>Desain Komunikasi Visual</h3>
+          </a>
+        </div>
+        <a class="home-programs-link" href="profil.html#program-keahlian">Lihat detail semua program <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer" id="kontak">
+      <div class="footer-container">
+        <!-- identitas sekolah -->
+        <div class="footer-column">
+          <div class="footer-brand">
+            <div class="footer-logo" role="img" aria-label="Logo sekolah">
+            </div>
+            <h3>SMK NURUL ISLAM CIANJUR</h3>
+          </div>
+          <p>Media informasi dan dokumentasi kegiatan sekolah.</p>
+        </div>
+
+        <!-- navigation -->
+        <div class="footer-column">
+          <h4>Navigasi</h4>
+          <nav class="footer-links" aria-label="Navigasi footer">
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="artikel.html">Artikel</a>
+            <a href="tutorial.html">Tutorial</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="kontak.html">Kontak</a>
+          </nav>
+        </div>
+
+        <!-- ADDRESS -->
+        <div class="footer-column">
+          <h4>Alamat Sekolah</h4>
+          <p class="footer-detail">
+            <i class="fa-solid fa-school" aria-hidden="true"></i>
+            <span>Jl. Raya Cianjur - Bandung KM. 09, Desa Selajambe, Kec. Sukaluyu, Cianjur</span>
+          </p>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-column">
+          <h4>Hubungi Kami</h4>
+          <p class="footer-detail">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <a href="tel:+62263325749">(0263) 325749</a>
+          </p>
+
+          <p class="footer-detail">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:smknurulislamcianjur@gmail.com">smknurulislamcianjur@gmail.com</a>
+          </p>
+
+          <div class="social-links">
+            <a
+              href="https://youtube.com/@smknurulislamcianjur?si=RVncWw3QQM4tRcN"
+              aria-label="YouTube"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/smknurulislamcianjur?exln=MTc3N3E5Ynp3cWM4aw=="
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/share/1EyA4eeDF7/"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@smknurulislamcianjur?_=r=1&_t=ZS-9D5Dz1kFX61"
+              aria-label="TikTok"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">© 2026 SMK Nurul Islam Cianjur</div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/shared-layout.js"></script>
+  </body>
+</html>

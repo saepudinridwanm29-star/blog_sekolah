@@ -40,10 +40,6 @@
         <article class="article-detail">
           <span id="tutorialDetailCategory" class="category-label">Kategori</span>
           <h1 id="tutorialDetailTitle">Memuat tutorial...</h1>
-          <div class="article-detail-date">
-            <i class="fa-regular fa-clock" aria-hidden="true"></i>
-            <span id="tutorialDetailReadTime"></span>
-          </div>
           <img id="tutorialDetailImage" src="assets/images/desain_grafis.jpg" alt="" />
           <div class="article-detail-body">
             <p id="tutorialDetailIntro"></p>
@@ -85,7 +81,140 @@
         </aside>
       </div>
     </main>
-    <script src="assets/js/script.js"></script>
+    <script>
+      const tutorials = {
+        "dasar-php-native": {
+          title: "Membuat Sistem CRUD Sederhana Menggunakan Native PHP & MySQL",
+          category: "PPLG / IT",
+          image: "assets/images/tutorial/codingan.jpg",
+          intro:
+            "CRUD adalah proses Create, Read, Update, dan Delete untuk mengelola data. Contoh berikut menggunakan tabel siswa dan koneksi database MySQL.",
+          steps: [
+            "Buat database MySQL, misalnya sekolah, melalui phpMyAdmin. Setelah itu, buat tabel siswa dengan kolom id sebagai primary key dan auto increment, nama untuk menyimpan nama siswa, serta kelas untuk menyimpan kelas siswa.",
+            "Buat file koneksi.php untuk menghubungkan PHP dengan database MySQL. Isi konfigurasi koneksi menggunakan mysqli, kemudian periksa apakah koneksi berhasil agar aplikasi dapat berkomunikasi dengan database.",
+            "Buat halaman index.php untuk menampilkan seluruh data siswa dari tabel siswa. Gunakan query SELECT untuk mengambil data, kemudian tampilkan setiap data dalam tabel HTML. Pastikan data yang ditampilkan menggunakan htmlspecialchars() agar output lebih aman.",
+            "Buat halaman tambah.php yang berisi form input nama dan kelas. Ketika form dikirim, ambil data menggunakan metode POST, lakukan validasi agar input tidak kosong, kemudian simpan data ke database menggunakan query INSERT dengan prepared statement.",
+            "Buat halaman edit.php untuk mengubah data siswa yang sudah tersimpan. Ambil data berdasarkan id menggunakan query SELECT, tampilkan data tersebut pada form, lalu gunakan query UPDATE dengan prepared statement ketika pengguna menyimpan perubahan.",
+            "Tambahkan fitur hapus untuk menghapus data siswa berdasarkan id. Gunakan metode POST agar penghapusan tidak dilakukan melalui tautan GET, tampilkan konfirmasi sebelum mengirim permintaan, dan jalankan query DELETE menggunakan prepared statement.",
+            "Lakukan pengujian terhadap seluruh fitur CRUD, mulai dari menambahkan data, menampilkan data, mengubah data, hingga menghapus data. Pastikan setiap operasi berjalan dengan benar dan perubahan data benar-benar tersimpan di database.",
+          ],
+        },
+        "konfigurasi-mikrotik-hotspot": {
+          title:
+            "Konfigurasi Hotspot Gateway Mikrotik dan User Manager untuk Lab Sekolah",
+          category: "Jaringan (TJKT)",
+          image: "assets/images/tutorial/mikrotik.jpg",
+          intro:
+            "Panduan ini merangkum urutan konfigurasi dasar hotspot untuk jaringan laboratorium. Sesuaikan alamat IP dan kebijakan akses dengan rancangan jaringan sekolah.",
+          steps: [
+            "Siapkan perangkat MikroTik, komputer untuk konfigurasi, dan kabel jaringan. Hubungkan komputer ke router menggunakan Winbox, kemudian buat backup konfigurasi router agar pengaturan awal dapat dipulihkan jika terjadi kesalahan.",
+            "Identifikasi interface yang akan digunakan sebagai koneksi internet (WAN) dan jaringan lokal (LAN). Atur alamat IP pada interface LAN sesuai rancangan jaringan, kemudian pastikan koneksi router ke jaringan internet sudah berfungsi.",
+            "Konfigurasikan DHCP Server pada interface LAN agar perangkat klien mendapatkan alamat IP secara otomatis. Tentukan IP Address Pool, gateway, dan DNS Server sesuai rentang alamat jaringan yang telah direncanakan.",
+            "Buka menu IP > Hotspot, kemudian jalankan Hotspot Setup pada interface LAN. Ikuti tahapan konfigurasi dengan menentukan alamat IP lokal, rentang IP klien, sertifikat jika diperlukan, DNS Server, dan nama domain untuk halaman login Hotspot.",
+            "Aktifkan dan konfigurasikan User Manager sesuai versi RouterOS dan dukungan perangkat MikroTik yang digunakan. Hubungkan layanan Hotspot dengan User Manager melalui pengaturan RADIUS, kemudian sesuaikan alamat server, shared secret, dan layanan autentikasi.",
+            "Buat profil pengguna pada User Manager dengan menentukan batas waktu penggunaan, masa berlaku akun, dan batas pemakaian data sesuai kebutuhan laboratorium sekolah. Setelah itu, buat beberapa akun uji untuk memastikan pengelolaan pengguna berjalan dengan baik.",
+            "Lakukan pengujian menggunakan perangkat klien yang terhubung ke jaringan LAN. Pastikan perangkat memperoleh IP melalui DHCP, halaman login Hotspot dapat dibuka, dan akun yang dibuat melalui User Manager berhasil digunakan untuk autentikasi.",
+            "Periksa kembali status pengguna, koneksi internet, pengaturan bandwidth, serta aturan firewall. Pastikan hanya pengguna yang memiliki akun valid yang dapat mengakses jaringan sesuai kebijakan yang telah ditentukan.",
+          ],
+        },
+        "vektor-logo-illustrator": {
+          title:
+            "Teknik Tracing dan Pembuatan Logo Vektor Presisi di Adobe Illustrator",
+          category: "Desain (DKV)",
+          image: "assets/images/tutorial/logo_vendor.jpg",
+          intro:
+            "Tracing membantu mengubah sketsa atau referensi menjadi bentuk vektor yang rapi dan mudah digunakan pada berbagai ukuran.",
+          steps: [
+            "Buka Adobe Illustrator, buat dokumen baru dengan ukuran artboard sesuai kebutuhan desain. Siapkan sketsa logo sebagai referensi, masukkan ke dalam artboard, atur posisinya, lalu kunci layer agar tidak bergeser saat proses menggambar.",
+            "Gunakan Pen Tool (P) untuk menggambar bentuk utama logo mengikuti sketsa yang telah disiapkan. Buat titik anchor seperlunya dan atur handle pada setiap titik agar menghasilkan garis serta kurva yang halus.",
+            "Gunakan Direct Selection Tool (A) untuk memperbaiki posisi anchor point dan mengatur lengkungan bentuk. Jika logo terdiri dari beberapa objek, manfaatkan Pathfinder untuk menggabungkan, memotong, atau membentuk objek sesuai desain yang diinginkan.",
+            "Tambahkan warna pada setiap bagian logo menggunakan panel Swatches atau Color. Pilih kombinasi warna yang sesuai dengan konsep desain, atur ketebalan garis jika diperlukan, dan pastikan logo tetap terlihat jelas dalam versi hitam putih.",
+            "Periksa kembali keseluruhan desain, termasuk proporsi, kerapian garis, keselarasan bentuk, dan konsistensi warna. Pastikan tidak ada objek yang bertumpuk atau bagian yang terpotong secara tidak sengaja.",
+            "Simpan proyek dalam format AI agar seluruh objek dan layer tetap dapat diedit. Selanjutnya, ekspor logo ke format SVG untuk penggunaan pada website atau media digital, serta PDF untuk kebutuhan dokumentasi dan pencetakan.",
+          ],
+        },
+        "panduan-cbt-siswa": {
+          title: "Panduan Penggunaan Aplikasi Ujian Berbasis Komputer (CBT) Siswa",
+          category: "Panduan Sekolah",
+          image: "assets/images/tutorial/cbt.jpg",
+          intro:
+            "Gunakan panduan ini untuk mengikuti ujian CBT dengan tertib. Ikuti juga arahan pengawas dan informasi jadwal resmi dari sekolah.",
+          steps: [
+            "Siapkan perangkat komputer atau laptop yang akan digunakan untuk ujian. Pastikan perangkat dapat berfungsi dengan baik, koneksi internet stabil, dan browser sudah tersedia. Setelah itu, buka alamat website CBT yang telah diberikan oleh pihak sekolah.",
+            "Pada halaman login, masukkan username dan password akun ujian yang telah diberikan. Pastikan data akun dimasukkan dengan benar, kemudian klik tombol Masuk untuk membuka halaman ujian.",
+            "Setelah berhasil masuk, periksa identitas peserta, seperti nama, kelas, nomor peserta, dan mata pelajaran yang akan diujikan. Pastikan seluruh informasi sudah sesuai sebelum memulai ujian.",
+            "Baca petunjuk pengerjaan yang tersedia pada halaman ujian. Perhatikan jumlah soal, durasi waktu, cara memilih jawaban, serta fungsi tombol navigasi agar proses pengerjaan berjalan dengan lancar.",
+            "Mulai kerjakan soal secara berurutan dengan membaca setiap pertanyaan secara teliti. Pilih jawaban yang dianggap paling tepat dan manfaatkan fitur navigasi atau penanda soal jika tersedia untuk memudahkan pemeriksaan kembali.",
+            "Setelah seluruh soal selesai dikerjakan, periksa kembali jawaban dan pastikan tidak ada soal yang terlewat. Perhatikan sisa waktu ujian sebelum melanjutkan ke tahap pengumpulan jawaban.",
+            "Jika sudah yakin, klik tombol Selesai atau Kirim sesuai petunjuk pada sistem. Periksa kembali konfirmasi pengumpulan dan pastikan jawaban berhasil terkirim sebelum meninggalkan halaman ujian.",
+            "Apabila mengalami kendala seperti halaman tidak dapat dibuka, koneksi terputus, atau jawaban tidak tersimpan, segera hubungi pengawas ujian atau petugas sekolah. Jangan membagikan username dan password akun kepada orang lain.",
+          ],
+        },
+        "responsive-tailwind-css": {
+          title: "Membangun Responsive Layout Web Modern dengan Tailwind CSS",
+          category: "PPLG / IT",
+          image: "assets/images/tutorial/responsive.jpg",
+          intro:
+            "Tailwind CSS menyediakan utility class untuk menyusun tampilan secara langsung di markup. Mulailah dari layar kecil dan tambahkan breakpoint saat layout membutuhkannya.",
+          steps: [
+            "Siapkan proyek HTML dan Tailwind CSS. Pastikan Tailwind CSS sudah terpasang atau dikonfigurasi sesuai versi yang digunakan. Jika menggunakan Tailwind CSS melalui CDN, tambahkan script CDN pada bagian head file HTML.",
+            "Buat struktur dasar halaman menggunakan elemen HTML seperti header, nav, main, section, dan footer. Susun setiap bagian sesuai kebutuhan tampilan website agar struktur halaman lebih teratur dan mudah dikembangkan.",
+            "Gunakan utility class Tailwind CSS untuk mengatur tampilan elemen, seperti pembuatan jarak menggunakan padding dan margin, pengaturan warna menggunakan background dan text color, serta ukuran teks menggunakan font size dan font weight.",
+            "Atur tata letak halaman menggunakan Flexbox dengan class flex atau CSS Grid dengan class grid. Gunakan justify-between, items-center, grid-cols, dan gap untuk mengatur posisi serta jarak antar elemen agar lebih rapi.",
+            "Terapkan responsive breakpoint Tailwind CSS seperti sm:, md:, lg:, dan xl: untuk menyesuaikan ukuran teks, jarak, jumlah kolom, serta susunan elemen berdasarkan ukuran layar perangkat.",
+            "Atur gambar agar menyesuaikan ukuran kontainer menggunakan class w-full, h-auto, dan object-cover atau object-contain sesuai kebutuhan. Pastikan gambar tidak melampaui batas kontainer dan tetap terlihat proporsional.",
+            "Tambahkan penyesuaian pada elemen navigasi, tombol, dan komponen lainnya agar mudah digunakan pada perangkat desktop maupun mobile. Pastikan setiap elemen interaktif dapat diakses menggunakan keyboard.",
+            "Jalankan halaman website melalui browser, kemudian uji tampilannya menggunakan fitur Inspect Element atau Developer Tools pada beberapa ukuran layar. Periksa apakah terdapat elemen yang bertumpuk, terpotong, atau menyebabkan horizontal scrolling, lalu perbaiki hingga tampilan responsif dan nyaman digunakan.",
+          ],
+        },
+        "crimping-kabel-lan": {
+          title: "Panduan Praktik Crimping Kabel UTP Straight dan Cross T568B",
+          category: "Jaringan (TJKT)",
+          image: "assets/images/tutorial/kabel.jpg",
+          intro:
+            "Crimping memerlukan susunan warna yang konsisten dan pemeriksaan hasil dengan LAN tester. Gunakan kabel dan konektor sesuai kebutuhan praktik.",
+          steps: [
+            "Siapkan seluruh peralatan dan bahan yang diperlukan, yaitu kabel UTP, dua konektor RJ45, tang crimping, LAN tester, dan alat pengupas kabel jika tersedia. Tentukan panjang kabel sesuai kebutuhan, kemudian potong kabel UTP menggunakan tang crimping atau pemotong kabel.",
+            "Kupas bagian jaket luar kabel UTP secukupnya dengan hati-hati agar isolasi kabel bagian dalam tidak rusak. Setelah itu, pisahkan empat pasang kabel kecil, lepaskan lilitannya, dan luruskan setiap kabel agar mudah disusun.",
+            "Susun delapan kabel kecil berdasarkan urutan warna standar T568B dari kiri ke kanan saat konektor RJ45 dilihat dari sisi pin dengan posisi klip pengunci berada di bagian bawah. Urutannya adalah putih-oranye, oranye, putih-hijau, biru, putih-biru, hijau, putih-cokelat, dan cokelat.",
+            "Setelah urutan warna benar, rapikan seluruh kabel agar sejajar dan potong ujungnya secara rata. Masukkan kedelapan kabel ke dalam konektor RJ45 dengan posisi yang tepat. Pastikan setiap konduktor masuk hingga mencapai bagian ujung konektor dan jaket luar kabel ikut tertahan oleh bagian penjepit konektor.",
+            "Periksa kembali susunan warna dan posisi kabel melalui bagian transparan konektor RJ45. Jika semuanya sudah benar, masukkan konektor ke tang crimping, kemudian tekan tang hingga pin konektor menjepit konduktor dan pengunci kabel terpasang dengan kuat.",
+            "Ulangi proses pemasangan konektor pada ujung kabel lainnya menggunakan standar T568B yang sama untuk menghasilkan kabel straight. Pastikan kedua ujung memiliki urutan warna yang identik sebelum melakukan pengujian.",
+            "Hubungkan kedua ujung kabel ke LAN tester, kemudian nyalakan alat untuk memeriksa kontinuitas setiap jalur. Pastikan indikator pin 1 sampai 8 menyala secara berurutan dan sesuai pada kedua sisi. Jika terdapat jalur yang tidak terhubung atau urutannya salah, periksa kembali pemasangan konektor dan lakukan perbaikan.",
+            "Setelah seluruh jalur dinyatakan normal, kabel LAN siap digunakan untuk menghubungkan perangkat jaringan seperti komputer, switch, router, atau perangkat jaringan lainnya.",
+          ],
+        },
+      };
+
+      const tutorialId = new URLSearchParams(window.location.search).get("id");
+      const tutorial = tutorialId ? tutorials[tutorialId] : null;
+      const detailTitle = document.getElementById("tutorialDetailTitle");
+      const detailCategory = document.getElementById("tutorialDetailCategory");
+      const detailImage = document.getElementById("tutorialDetailImage");
+      const detailIntro = document.getElementById("tutorialDetailIntro");
+      const detailSteps = document.getElementById("tutorialDetailSteps");
+
+      if (!tutorial) {
+        document.title = "Tutorial tidak ditemukan - SMK Nurul Islam Cianjur";
+        detailTitle.textContent = "Tutorial tidak ditemukan";
+        detailCategory.textContent = "Materi tidak tersedia";
+        detailImage.hidden = true;
+        detailIntro.textContent =
+          "Tautan materi tidak valid atau tutorial sudah tidak tersedia.";
+      } else {
+        document.title = `${tutorial.title} - Tutorial SMK Nurul Islam Cianjur`;
+        detailTitle.textContent = tutorial.title;
+        detailCategory.textContent = tutorial.category;
+        detailImage.src = tutorial.image;
+        detailImage.alt = tutorial.title;
+        detailIntro.textContent = tutorial.intro;
+        tutorial.steps.forEach((step) => {
+          const item = document.createElement("li");
+          item.textContent = step;
+          detailSteps.append(item);
+        });
+      }
+    </script>
     <script src="assets/js/shared-layout.js"></script>
   </body>
 </html>

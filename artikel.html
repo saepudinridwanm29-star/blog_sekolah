@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/artikel.css" />
     <link rel="stylesheet" href="includes/menu.css" />
-    <link rel="stylesheet" href="includes/sidebar.css" />
     <link rel="stylesheet" href="includes/footer.css" />
     <link rel="stylesheet" href="includes/scroll-effects.css" />
   </head>
@@ -49,12 +48,14 @@
               <a href="#semua" class="active" data-filter="semua">Semua</a>
               <a href="#kegiatan" data-filter="kegiatan">Kegiatan</a>
               <a href="#prestasi" data-filter="prestasi">Prestasi</a>
+              <a href="#karya" data-filter="karya">Karya</a>
               <a href="#pengumuman" data-filter="pengumuman">Pengumuman</a>
-              <a href="#ekstrakurikuler" data-filter="ekstrakurikuler">Ekstrakurikuler</a>
             </div>
           </div>
 
           <div class="article-list">
+
+            <!-- Kegiatan upacara -->
             <article class="article-card" id="kegiatan" data-category="kegiatan">
               <a class="article-image-box" href="artikel-detail.html?id=sumpah-pemuda">
                 <img src="assets/images/upacara_nuris.jpg" alt="Peserta didik mengikuti upacara bendera" />
@@ -64,12 +65,13 @@
                   <span>28 Oktober 2026</span>
                   <span class="category-label">Kegiatan Sekolah</span>
                 </div>
-                <h2 class="article-title">Upacara Hari Sumpah Pemuda Berlangsung Khidmat</h2>
+                <a href="artikel-detail.html?id=sumpah-pemuda" class="article-title">Upacara Hari Sumpah Pemuda Berlangsung Khidmat</a>
                 <p class="article-excerpt">Seluruh siswa, guru, dan staf SMK Nurul Islam Cianjur mengikuti upacara peringatan Hari Sumpah Pemuda dengan penuh semangat kebangsaan.</p>
                 <a href="artikel-detail.html?id=sumpah-pemuda" class="btn-read-more">Baca Selengkapnya <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
+            <!-- prestasi puisi -->
             <article class="article-card" id="prestasi" data-category="prestasi">
               <a class="article-image-box" href="artikel-detail.html?id=juara-puisi">
                 <img src="assets/images/prestasi/juara_puisi.jpg" alt="Dokumentasi apresiasi siswa bersama guru" loading="lazy" />
@@ -79,27 +81,29 @@
                   <span>25 September 2026</span>
                   <span class="category-label">Prestasi</span>
                 </div>
-                <h2 class="article-title">Siswa Raih Juara 1 Lomba Menulis Puisi Tingkat Kabupaten</h2>
+                <a href="artikel-detail.html?id=juara-puisi" class="article-title">Siswa Raih Juara 1 Lomba Menulis Puisi Tingkat Kabupaten</a>
                 <p class="article-excerpt">Prestasi membanggakan diraih siswa SMK Nurul Islam Cianjur melalui karya puisi yang kreatif dan inspiratif dalam ajang tingkat kabupaten.</p>
                 <a href="artikel-detail.html?id=juara-puisi" class="btn-read-more">Baca Selengkapnya <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
-            <article class="article-card" id="ekstrakurikuler" data-category="ekstrakurikuler">
+            <!-- kegiatan perkemahan -->
+            <article class="article-card" id="ekstrakurikuler" data-category="kegiatan">
               <a class="article-image-box" href="artikel-detail.html?id=pramuka">
                 <img src="perkemahan.jpg" alt="Api unggun pada kegiatan perkemahan sekolah" loading="lazy" />
               </a>
               <div class="article-content">
                 <div class="article-meta">
                   <span>12 Oktober 2026</span>
-                  <span class="category-label">Ekstrakurikuler</span>
+                  <span class="category-label">Kegiatan sekolah</span>
                 </div>
-                <h2 class="article-title">Ekstrakurikuler Pramuka Gelar Perkemahan Akhir Pekan</h2>
+                <a href="artikel-detail.html?id=pramuka" class="article-title">Ekstrakurikuler Pramuka Gelar Perkemahan Akhir Pekan</a>
                 <p class="article-excerpt">Kegiatan perkemahan menjadi ajang mempererat kebersamaan, melatih kepemimpinan, dan menumbuhkan kemandirian anggota pramuka.</p>
                 <a href="artikel-detail.html?id=pramuka" class="btn-read-more">Baca Selengkapnya <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
+            <!-- Pengumuman ujian -->
             <article class="article-card" id="pengumuman" data-category="pengumuman">
               <a class="article-image-box" href="artikel-detail.html?id=ujian-tengah-semester">
                 <img src="gedung_sekolah.jpg" alt="Gedung SMK Nurul Islam sebagai lokasi kegiatan sekolah" loading="lazy" />
@@ -109,80 +113,103 @@
                   <span>8 Oktober 2026</span>
                   <span class="category-label">Pengumuman</span>
                 </div>
-                <h2 class="article-title">Pengumuman Jadwal Kegiatan Ujian Tengah Semester</h2>
+                <a href="artikel-detail.html?id=ujian-tengah-semester" class="article-title">Pengumuman Jadwal Kegiatan Ujian Tengah Semester</a>
                 <p class="article-excerpt">Peserta didik dimohon mempersiapkan diri dan mengikuti jadwal ujian sesuai pembagian kelas serta arahan wali kelas masing-masing.</p>
                 <a href="artikel-detail.html?id=ujian-tengah-semester" class="btn-read-more">Baca Selengkapnya <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
+            <!-- kegiatan serah terima pkl -->
             <article class="article-card" data-category="kegiatan">
               <a class="article-image-box" href="artikel-detail.html?id=serah-terima-tamatan">
                 <img src="gedung_sekolah.jpg" alt="Lingkungan SMK Nurul Islam" loading="lazy" />
               </a>
               <div class="article-content">
-                <div class="article-meta"><span>30 September 2026</span><span class="category-label">Kegiatan Sekolah</span></div>
-                <h2 class="article-title">SMK Nurul Islam Gelar Serah Terima Peserta Magang</h2>
+                <div class="article-meta">
+                  <span>30 September 2026</span>
+                  <span class="category-label">Kegiatan Sekolah</span>
+                </div>
+                <a href="artikel-detail.html?id=serah-terima-tamatan" class="article-title">SMK Nurul Islam Gelar Serah Terima Peserta Magang</a>
                 <p class="article-excerpt">Kegiatan serah terima peserta didik ke dunia usaha dan industri menjadi langkah awal mereka memahami lingkungan kerja profesional.</p>
                 <a href="artikel-detail.html?id=serah-terima-tamatan" class="btn-read-more">Baca Selengkapnya <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
+            <!-- Prestasi cerpen -->
             <article class="article-card" data-category="prestasi">
               <a class="article-image-box" href="artikel-detail.html?id=juara-cerpen">
                 <img src="assets/images/prestasi/juara_cerpen.jpg" alt="Dokumentasi apresiasi karya siswa bersama guru" loading="lazy" />
               </a>
               <div class="article-content">
-                <div class="article-meta"><span>18 September 2026</span><span class="category-label">Prestasi</span></div>
-                <h2 class="article-title">Siswa Meraih Juara 2 Lomba Menulis Cerpen</h2>
+                <div class="article-meta">
+                  <span>18 September 2026</span>
+                  <span class="category-label">Prestasi</span></div>
+                <a href="artikel-detail.html?id=juara-cerpen" class="article-title">Siswa Meraih Juara 2 Lomba Menulis Cerpen</a>
                 <p class="article-excerpt">Karya cerpen siswa SMK Nurul Islam berhasil menyisihkan peserta lain dan memperoleh penghargaan tingkat kabupaten.</p>
                 <a href="artikel-detail.html?id=juara-cerpen" class="btn-read-more">Baca Selengkapnya <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
-            <article class="article-card" data-category="kegiatan">
+            <!-- karya dkv -->
+            <article class="article-card" data-category="karya">
               <a class="article-image-box" href="artikel-detail.html?id=desain-grafis">
                 <img src="assets/images/desain_grafis.jpg" alt="Karya desain visual siswa" loading="lazy" />
               </a>
               <div class="article-content">
-                <div class="article-meta"><span>4 September 2026</span><span class="category-label">Kegiatan Sekolah</span></div>
-                <h2 class="article-title">Workshop Desain Grafis Bersama Praktisi Industri</h2>
+                <div class="article-meta">
+                  <span>4 September 2026</span>
+                  <span class="category-label">Karya</span>
+                </div>
+                <a href="artikel-detail.html?id=desain-grafis" class="article-title">Workshop Desain Grafis Bersama Praktisi Industri</a>
                 <p class="article-excerpt">Siswa jurusan Desain Komunikasi Visual mengikuti workshop untuk memperdalam proses desain, teknik visual, dan presentasi karya.</p>
                 <a href="artikel-detail.html?id=desain-grafis" class="btn-read-more">Baca Selengkapnya <span aria-hidden="true">→</span></a>
               </div>
             </article>
-
+            
+            <!-- Pengumuman ppdb -->
             <article class="article-card" data-category="pengumuman">
               <a class="article-image-box" href="artikel-detail.html?id=penerimaan-siswa-baru">
-                <img src="gedung_nuris.jpg" alt="Gedung utama SMK Nurul Islam" loading="lazy" />
+                <img src="assets/images/foto_spmb.jpg" alt="Gedung utama SMK Nurul Islam" loading="lazy" />
               </a>
               <div class="article-content">
-                <div class="article-meta"><span>1 September 2026</span><span class="category-label">Pengumuman</span></div>
-                <h2 class="article-title">Informasi Pendaftaran Peserta Didik Baru Dibuka</h2>
+                <div class="article-meta">
+                  <span>1 September 2026</span>
+                  <span class="category-label">Pengumuman</span>
+                </div>
+                <a href="artikel-detail.html?id=penerimaan-siswa-baru" class="article-title">Informasi Pendaftaran Peserta Didik Baru Dibuka</a>
                 <p class="article-excerpt">Pendaftaran peserta didik baru dibuka dengan tahapan seleksi administrasi, wawancara, dan pengukuran kompetensi awal.</p>
                 <a href="artikel-detail.html?id=penerimaan-siswa-baru" class="btn-read-more">Baca Selengkapnya <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
-            <article class="article-card" data-category="ekstrakurikuler">
+            <!-- prestasi pioneering -->
+            <article class="article-card" data-category="prestasi">
               <a class="article-image-box" href="artikel-detail.html?id=latihan-pramuka">
-                <img src="assets/images/ekstrakulikuler/pramuka.jpg" alt="Kegiatan siswa dalam ekstrakurikuler Pramuka" loading="lazy" />
+                <img src="assets/images/ekstrakulikuler/pioneering.jpg" alt="Kegiatan siswa dalam ekstrakurikuler Pramuka" loading="lazy" />
               </a>
               <div class="article-content">
-                <div class="article-meta"><span>27 Agustus 2026</span><span class="category-label">Ekstrakurikuler</span></div>
-                <h2 class="article-title">Pramuka SMK Nurul Islam Raih Prestasi Pioneering</h2>
+                <div class="article-meta">
+                  <span>27 Agustus 2026</span>
+                  <span class="category-label">Prestasi</span>
+                </div>
+                <a href="artikel-detail.html?id=latihan-pramuka" class="article-title">Pramuka SMK Nurul Islam Raih Prestasi Pioneering</a>
                 <p class="article-excerpt">Regu pramuka sekolah menunjukkan kerja sama dan ketangkasan dalam lomba teknik pioneering tingkat kabupaten.</p>
                 <a href="artikel-detail.html?id=latihan-pramuka" class="btn-read-more">Baca Selengkapnya <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
-            <article class="article-card" data-category="ekstrakurikuler">
+            <!-- prestasi monolog -->
+            <article class="article-card" data-category="prestasi">
               <a class="article-image-box" href="artikel-detail.html?id=juara-monolog">
                 <img src="assets/images/ekstrakulikuler/tari.jpg" alt="Penampilan seni tari siswa" loading="lazy" />
               </a>
               <div class="article-content">
-                <div class="article-meta"><span>20 Agustus 2026</span><span class="category-label">Ekstrakurikuler</span></div>
-                <h2 class="article-title">Siswa Menampilkan Tari dalam Kegiatan Seni Sekolah</h2>
-                <p class="article-excerpt">Penampilan seni tari menjadi salah satu ruang bagi peserta didik untuk mengembangkan kreativitas, percaya diri, dan apresiasi budaya.</p>
+                <div class="article-meta">
+                  <span>20 Agustus 2026</span>
+                  <span class="category-label">Prestasi</span>
+                </div>
+                <a href="artikel-detail.html?id=juara-monolog" class="article-title">Siswi SMK Nurul Islam Raih Prestasi dalam Lomba Monolog</a>
+                <p class="article-excerpt">Prestasi membanggakan berhasil diraih oleh salah satu siswi SMK Nurul Islam dalam ajang lomba monolog. Melalui kemampuan berekspresi,</p>
                 <a href="artikel-detail.html?id=juara-monolog" class="btn-read-more">Baca Selengkapnya <span aria-hidden="true">→</span></a>
               </div>
             </article>

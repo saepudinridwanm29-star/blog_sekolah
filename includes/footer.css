@@ -109,27 +109,23 @@
 
 .social-links a:hover {
   transform: translateY(-2px);
-  background: #e2e8f0;
+  background: white;
 }
 
-.social-links .fa-youtube:hover{
+.social-links a:hover .fa-youtube:hover{
   color: #ff0000;
-  background-color: #ffffff;
 }
 
-.social-links .fa-instagram:hover{
+.social-links a:hover .fa-instagram:hover{
   color: #f33232;
-  background-color: #ffffff;
 }
 
 .social-links .fa-facebook-f:hover{
   color: #0b64d8;
-  background-color: #ffffff;
 }
 
 .social-links .fa-tiktok:hover{
   color: black;
-  background-color: #ffffff;
 }
 
 .social-links i {
@@ -142,9 +138,8 @@
 
 .copyright {
   padding: 12px 15px;
-  border-top: 1px solid #e2e8f0;
-  background: #f1f5f9;
-  color: #000000;
+  background: var(--navy);
+  color: var(--text);
   font-size: 11px;
   text-align: center;
 }

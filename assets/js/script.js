@@ -153,11 +153,8 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
 
             searchNews(searchInput.value);
-
         });
-
     }
-
 });
 
 // Data materi ditampilkan pada halaman detail berdasarkan ID di URL.

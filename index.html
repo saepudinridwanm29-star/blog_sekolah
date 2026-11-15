@@ -22,7 +22,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="includes/menu.css" />
-    <link rel="stylesheet" href="includes/sidebar.css" />
     <link rel="stylesheet" href="includes/footer.css" />
     <link rel="stylesheet" href="includes/scroll-effects.css" />
   </head>
@@ -231,16 +230,100 @@
                 </a>
               </div>
             </article>
+          </div>
 
-            <!-- Pesan hasil pencarian -->
+          <section class="home-programs" aria-labelledby="homeProgramsTitle">
+            <div class="section-header">
+              <div class="section-title">
+                <span class="title-line"></span>
+                <div>
+                  <small>PROGRAM KEAHLIAN</small>
+                  <h2 id="homeProgramsTitle">Pilih Program Keahlianmu</h2>
+                </div>
+              </div>
+
+              <a href="profil.html#program-keahlian" class="see-all">
+                Lihat Detail Semua Program
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="home-programs-grid">
+              <article data-news-card>
+                <a class="home-program-card" href="profil.html#program-pplg">
+                  <img src="assets/images/jurusan/pplg.jpg" alt="Peserta didik program PPLG" loading="lazy" />
+                  <div class="home-program-content">
+                    <span>PPLG</span>
+                    <h3>Pengembangan Perangkat Lunak dan Gim</h3>
+                    <p>Belajar membuat aplikasi, website, gim, dan solusi digital.</p>
+                  </div>
+                </a>
+              </article>
+
+              <article data-news-card>
+                <a class="home-program-card" href="profil.html#program-tjkt">
+                  <img src="assets/images/jurusan/tjkt.jpg" alt="Peserta didik program TJKT" loading="lazy" />
+                  <div class="home-program-content">
+                    <span>TJKT</span>
+                    <h3>Teknik Jaringan Komputer dan Telekomunikasi</h3>
+                    <p>Mendalami jaringan komputer, server, perangkat, dan telekomunikasi.</p>
+                  </div>
+                </a>
+              </article>
+
+              <article data-news-card>
+                <a class="home-program-card" href="profil.html#program-to">
+                  <img src="assets/images/jurusan/to.jpg" alt="Peserta didik program Teknik Otomotif" loading="lazy" />
+                  <div class="home-program-content">
+                    <span>TO</span>
+                    <h3>Teknik Otomotif</h3>
+                    <p>Mempelajari perawatan, diagnosis, dan perbaikan kendaraan.</p>
+                  </div>
+                </a>
+              </article>
+
+              <article data-news-card>
+                <a class="home-program-card" href="profil.html#program-akl">
+                  <img src="assets/images/jurusan/akl.jpg" alt="Guru produktif program AKL" loading="lazy" />
+                  <div class="home-program-content">
+                    <span>AKL</span>
+                    <h3>Akuntansi dan Keuangan Lembaga</h3>
+                    <p>Mengembangkan keterampilan akuntansi, keuangan, dan perpajakan.</p>
+                  </div>
+                </a>
+              </article>
+
+              <article data-news-card>
+                <a class="home-program-card" href="profil.html#program-mplb">
+                  <img src="assets/images/jurusan/mplb.jpg" alt="Peserta didik program MPLB" loading="lazy" />
+                  <div class="home-program-content">
+                    <span>MPLB</span>
+                    <h3>Manajemen Perkantoran dan Layanan Bisnis</h3>
+                    <p>Belajar administrasi, pelayanan bisnis, komunikasi, dan manajemen kantor.</p>
+                  </div>
+                </a>
+              </article>
+
+              <article data-news-card>
+                <a class="home-program-card" href="profil.html#program-dkv">
+                  <img src="assets/images/jurusan/dkv.jpg" alt="Peserta didik program DKV" loading="lazy" />
+                  <div class="home-program-content">
+                    <span>DKV</span>
+                    <h3>Desain Komunikasi Visual</h3>
+                    <p>Berkreasi dalam desain grafis, ilustrasi, fotografi, dan multimedia.</p>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </section>
+
+          <!-- Pesan hasil pencarian -->
             <div class="search-empty" id="searchEmpty" hidden>
               <i class="fa-solid fa-magnifying-glass"></i>
               <h3>Berita tidak ditemukan</h3>
               <p>Coba gunakan kata kunci pencarian lainnya.</p>
             </div>
-          </div>
 
-          <!-- informasi sekolah -->
           <div class="school-info" id="profil">
             <div class="info-content">
               <h3>Informasi Sekolah</h3>
@@ -290,49 +373,6 @@
         </aside>
       </div>
     </main>
-
-    <section class="home-programs" aria-labelledby="homeProgramsTitle">
-      <div class="home-programs-container">
-        <div class="home-programs-heading">
-          <span>MASA DEPAN DIMULAI DI SINI</span>
-          <h2 id="homeProgramsTitle">Pilih Program Keahlianmu</h2>
-          <p>Kenali bidang belajar dan kompetensi yang dapat dikembangkan di SMK Nurul Islam Cianjur.</p>
-        </div>
-        <div class="home-programs-grid">
-          <a class="home-program-card" href="profil.html#program-pplg">
-            <img src="assets/images/jurusan/pplg.jpg" alt="Peserta didik program PPLG" loading="lazy" />
-            <span>PPLG</span>
-            <h3>Pengembangan Perangkat Lunak dan Gim</h3>
-          </a>
-          <a class="home-program-card" href="profil.html#program-tjkt">
-            <img src="assets/images/jurusan/tjkt.jpg" alt="Peserta didik program TJKT" loading="lazy" />
-            <span>TJKT</span>
-            <h3>Teknik Jaringan Komputer dan Telekomunikasi</h3>
-          </a>
-          <a class="home-program-card" href="profil.html#program-to">
-            <img src="assets/images/jurusan/to.jpg" alt="Peserta didik program Teknik Otomotif" loading="lazy" />
-            <span>TO</span>
-            <h3>Teknik Otomotif</h3>
-          </a>
-          <a class="home-program-card" href="profil.html#program-akl">
-            <img src="assets/images/produktif/produktif_akl.jpg" alt="Guru produktif program AKL" loading="lazy" />
-            <span>AKL</span>
-            <h3>Akuntansi dan Keuangan Lembaga</h3>
-          </a>
-          <a class="home-program-card" href="profil.html#program-mplb">
-            <img src="assets/images/jurusan/mplb.jpg" alt="Peserta didik program MPLB" loading="lazy" />
-            <span>MPLB</span>
-            <h3>Manajemen Perkantoran dan Layanan Bisnis</h3>
-          </a>
-          <a class="home-program-card" href="profil.html#program-dkv">
-            <img src="assets/images/jurusan/dkv.jpg" alt="Peserta didik program DKV" loading="lazy" />
-            <span>DKV</span>
-            <h3>Desain Komunikasi Visual</h3>
-          </a>
-        </div>
-        <a class="home-programs-link" href="profil.html#program-keahlian">Lihat detail semua program <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-      </div>
-    </section>
 
     <!-- footer -->
     <footer class="footer" id="kontak">

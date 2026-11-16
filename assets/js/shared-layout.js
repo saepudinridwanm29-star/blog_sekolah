@@ -29,29 +29,29 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  function closeMenu() {
-    menu.classList.remove("show");
-    menuToggle.setAttribute("aria-expanded", "false");
-    const icon = menuToggle.querySelector("i");
-    if (icon) {
-      icon.classList.add("fa-bars");
-      icon.classList.remove("fa-xmark");
-    }
-  }
+  // function closeMenu() {
+  //   menu.classList.remove("show");
+  //   menuToggle.setAttribute("aria-expanded", "false");
+  //   const icon = menuToggle.querySelector("i");
+  //   if (icon) {
+  //     icon.classList.add("fa-bars");
+  //     icon.classList.remove("fa-xmark");
+  //   }
+  // }
 
-  menuToggle.addEventListener("click", () => {
-    const isOpen = menu.classList.toggle("show");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-    const icon = menuToggle.querySelector("i");
-    if (icon) {
-      icon.classList.toggle("fa-bars", !isOpen);
-      icon.classList.toggle("fa-xmark", isOpen);
-    }
-  });
+  // menuToggle.addEventListener("click", () => {
+  //   const isOpen = menu.classList.toggle("show");
+  //   menuToggle.setAttribute("aria-expanded", String(isOpen));
+  //   const icon = menuToggle.querySelector("i");
+  //   if (icon) {
+  //     icon.classList.toggle("fa-bars", !isOpen);
+  //     icon.classList.toggle("fa-xmark", isOpen);
+  //   }
+  // });
 
-  menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", closeMenu);
-  });
+  // menu.querySelectorAll("a").forEach((link) => {
+  //   link.addEventListener("click", closeMenu);
+  // });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -62,8 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  // di simpan didalam const dibawah ini 
+  // .gallery-card, 
   const revealTargets = document.querySelectorAll(
-    ".article-page-heading, .article-card, .gallery-card, .profile-about, " +
+    ".article-page-heading, .article-card, .profile-about, " +
     ".profile-vision, .profile-teachers, .profile-programs, .contact-information, " +
     ".form-section, .map-section, .sidebar-card, .footer-column"
   );
@@ -72,20 +74,20 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  const observer = new IntersectionObserver((entries, currentObserver) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        currentObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.08,
-    rootMargin: "0px 0px -24px 0px"
-  });
+  // const observer = new IntersectionObserver((entries, currentObserver) => {
+  //   entries.forEach((entry) => {
+  //     if (entry.isIntersecting) {
+  //       entry.target.classList.add("is-visible");
+  //       currentObserver.unobserve(entry.target);
+  //     }
+  //   });
+  // }, {
+  //   threshold: 0.08,
+  //   rootMargin: "0px 0px -24px 0px"
+  // });
 
-  revealTargets.forEach((target) => {
-    target.classList.add("scroll-reveal");
-    observer.observe(target);
-  });
+  // revealTargets.forEach((target) => {
+  //   target.classList.add("scroll-reveal");
+  //   observer.observe(target);
+  // });
 });

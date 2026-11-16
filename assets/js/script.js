@@ -68,55 +68,53 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // search berita
-  const searchForm = document.getElementById("headerSearch");
-  const searchInput = document.getElementById("searchInput");
-
-  const newsCards = document.querySelectorAll("[data-news-card]");
-
-  const emptyMessage = document.getElementById("searchEmpty");
+  // const searchForm = document.getElementById("headerSearch");
+  // const searchInput = document.getElementById("searchInput");
+  // const newsCards = document.querySelectorAll("[data-news-card]");
+  // const emptyMessage = document.getElementById("searchEmpty");
 
   // Fungsi pencarian berita
-  function searchNews(keyword) {
-    let totalFound = 0;
+  // function searchNews(keyword) {
+  //   let totalFound = 0;
 
-    const searchKeyword = keyword.toLowerCase().trim();
+  //   const searchKeyword = keyword.toLowerCase().trim();
 
-    newsCards.forEach(function (card) {
-      // Mengambil seluruh isi berita
-      const content = card.textContent.toLowerCase();
+  //   newsCards.forEach(function (card) {
+  //     // Mengambil seluruh isi berita
+  //     const content = card.textContent.toLowerCase();
 
-      // Memeriksa kecocokan kata
-      const isMatch = content.includes(searchKeyword);
+  //     // Memeriksa kecocokan kata
+  //     const isMatch = content.includes(searchKeyword);
 
-      // Menampilkan atau menyembunyikan berita
-      card.style.display = isMatch ? "" : "none";
+  //     // Menampilkan atau menyembunyikan berita
+  //     card.style.display = isMatch ? "" : "none";
 
-      if (isMatch) {
-        totalFound++;
-      }
-    });
+  //     if (isMatch) {
+  //       totalFound++;
+  //     }
+  //   });
 
     // Menampilkan pesan jika tidak ditemukan
-    if (emptyMessage) {
-      emptyMessage.hidden = totalFound !== 0;
-    }
-  }
+  //   if (emptyMessage) {
+  //     emptyMessage.hidden = totalFound !== 0;
+  //   }
+  // }
 
   // Pencarian langsung ketika mengetik
-  if (searchInput) {
-    searchInput.addEventListener("input", function () {
-      searchNews(this.value);
-    });
-  }
+  // if (searchInput) {
+  //   searchInput.addEventListener("input", function () {
+  //     searchNews(this.value);
+  //   });
+  // }
 
   // Mencegah halaman reload ketika tombol search diklik
-  if (searchForm) {
-    searchForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+//   if (searchForm) {
+//     searchForm.addEventListener("submit", function (event) {
+//       event.preventDefault();
 
-      searchNews(searchInput.value);
-    });
-  }
+//       searchNews(searchInput.value);
+//     });
+//   }
 });
 
 // Filter kategori untuk artikel, tutorial, dan galeri.
